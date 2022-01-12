@@ -120,6 +120,7 @@ keys = [
     Key([mod], "e", lazy.spawn("thunar")),
     Key([mod], "b", lazy.spawn("google-chrome-stable")),
     Key([mod, "shift"], "s", lazy.spawn("flameshot gui -p /home/adal/Pictures/Screenshots/")),
+    Key([], "XF86Calculator", lazy.spawn("kcalc")),
 
     # Window Nav
     Key([mod, "shift"], "m", lazy.spawn("rofi -show")),
@@ -128,6 +129,12 @@ keys = [
     Key([], "XF86AudioLowerVolume", lazy.spawn("pamixer --decrease 5")),
     Key([], "XF86AudioRaiseVolume", lazy.spawn("pamixer --increase 5")),
     Key([], "XF86AudioMute", lazy.spawn("pamixer --toggle-mute")),
+
+    # Music Control
+    Key([], "XF86AudioPlay", lazy.spawn("playerctl play-pause")),
+    Key([], "XF86AudioStop", lazy.spawn("playerctl stop")),
+    Key([], "XF86AudioNext", lazy.spawn("playerctl next")),
+    Key([], "XF86AudioPrev", lazy.spawn("playerctl previousb")),
 
     # Brightness
     Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl set +10%")),
