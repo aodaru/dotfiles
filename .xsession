@@ -4,6 +4,7 @@ userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap
 sysresources=/etc/X11/xinit/.Xresources
 sysmodmap=/etc/X11/xinit/.Xmodmap
+export PATH=$HOME/.local/bin:$PATH
 
 # merge in defaults and keymaps
 
@@ -36,7 +37,8 @@ fi
 dp=`xrandr | grep ' connected' | grep -v 'eDP-1' | grep 'DP-1' | awk '{print $1}'`
 
 if [ "$dp" = "DP-1" ]; then
-    xrandr --output eDP-1 --mode 1366x768 --pos 1366x0 --rotate normal --output HDMI-1 --off --output DP-1 --primary --mode 1366x768 --pos 0x0 --rotate normal --output HDMI-2 --off
+    # xrandr --output eDP-1 --mode 1366x768 --pos 1366x0 --rotate normal --output HDMI-1 --off --output DP-1 --primary --mode 1366x768 --pos 0x0 --rotate normal --output HDMI-2 --off
+    xrandr --output eDP-1 --primary --mode 1366x768 --pos 0x0 --rotate normal --output HDMI-1 --off --output DP-1 --mode 1366x768 --pos 1366x0 --rotate normal --output HDMI-2 --off
 else
     xrandr --output eDP-1 --primary --mode 1366x768 --pos 1366x0 --rotate normal --output HDMI-1 --off --output DP-1 --off
 fi
@@ -60,5 +62,5 @@ xsettingsd &
 feh --bg-scale ~/Pictures/Wallpapers/archbg.png &
 # Overlay Bar
 xob-pulse-py | xob -s pulse &
-xob-brightness-js | xob -s brightness &
+# xob-brightness-js | xob -s brightness &
 blueman-applet &

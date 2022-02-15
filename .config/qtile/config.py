@@ -142,6 +142,11 @@ screens = [
                     other_screen_border=["#424042", "#424042"],
                     disable_drag=True
                 ),
+                widget.Sep(
+                    linewidth=0,
+                    padding=5,
+                    background=["#565456","#565456"]
+                ),
                 powerlineright('#565456','#2d2a2e'),
                 widget.Sep(
                     linewidth=0,
@@ -155,37 +160,37 @@ screens = [
                     fontsize=14,
                     font='UbuntuMono Nerd Font Bold',
                 ),
-                powerline('#F4FE53','#2d2a2e'),
-                icon(bg="#F4FE53", text=' ',fontsize=12), # Icon: nf-fa-download
-                widget.CheckUpdates(
-                    background='#F4FE53',
-                    colour_have_updates='#FE7053',
-                    colour_no_updates='#2d2a2e',
-                    no_update_string='0',
-                    display_format='{updates}',
-                    update_interval=60,
-                    fontsize=11
-                ),
-                widget.Sep(
-                    linewidth=0,
-                    padding=5,
-                    background=["#F4FE53","#F4FE53"]
-                ),
-                powerline('#feaf57','#F4FE53'),
-                icon(bg="#feaf57", text=' ',fontsize=12),  # Icon: nf-fa-feed
-                widget.Net(
-                    **base("#2d2a2e","#feaf57"),
-                    interface=net_connect,
-                    format='{down} ↓↑{up}',
-                    fontsize=11,
-                    markup=True
-                ),
-                widget.Sep(
-                    linewidth=0,
-                    padding=5,
-                    background=["#feaf57","#feaf57"]
-                ),
-                powerline('#3895ff','#feaf57'),
+                # powerline('#F4FE53','#2d2a2e'),
+                # icon(bg="#F4FE53", text=' ',fontsize=12), # Icon: nf-fa-download
+                # widget.CheckUpdates(
+                #     background='#F4FE53',
+                #     colour_have_updates='#FE7053',
+                #     colour_no_updates='#2d2a2e',
+                #     no_update_string='0',
+                #     display_format='{updates}',
+                #     update_interval=60,
+                #     fontsize=11
+                # ),
+                # widget.Sep(
+                #     linewidth=0,
+                #     padding=5,
+                #     background=["#F4FE53","#F4FE53"]
+                # ),
+                # powerline('#feaf57','#F4FE53'),
+                # icon(bg="#feaf57", text=' ',fontsize=12),  # Icon: nf-fa-feed
+                # widget.Net(
+                #     **base("#2d2a2e","#feaf57"),
+                #     interface=net_connect,
+                #     format='{down} ↓↑{up}',
+                #     fontsize=11,
+                #     markup=True
+                # ),
+                # widget.Sep(
+                #     linewidth=0,
+                #     padding=5,
+                #     background=["#feaf57","#feaf57"]
+                # ),
+                powerline('#3895ff','#2d2a2e'),
                 widget.CurrentLayoutIcon(
                     foreground=["#2d2a2e", "#2d2a2e"],
                     background=["#3895ff","#3895ff"],
@@ -225,14 +230,15 @@ screens = [
             [
                 widget.GroupBox(
                     foreground=["#ffffff", "#ffffff"],
-                    background=["#2d2a2e", "#2d2a2e"],
+                    background=["#565456", "#565456"],
                     font='UbuntuMono Nerd Font',
                     fontsize=16,
-                    margin_y=3,
+                    margin_y=0,
                     margin_x=0,
-                    padding_y=8,
-                    padding_x=10,
+                    padding_y=4,
+                    padding_x=12,
                     borderwidth=1,
+                    center_aligned =False,
                     active=["#ffffff", "#ffffff"],
                     inactive=["#727072","#727072"],
                     rounded=False,
@@ -240,11 +246,38 @@ screens = [
                     urgent_alert_method='block',
                     urgent_border=["#ff6188","#ff6188"],
                     this_current_screen_border=["#a9dc76","#a9dc76"],
-                    this_screen_border=["#5a565b","#5a565b"],
-                    other_current_screen_border=["#2d2a2e", "#2d2a2e"],
-                    other_screen_border=["#2d2a2e", "#2d2a2e"],
+                    this_screen_border=["#a9dc76","#a9dc76"],
+                    other_current_screen_border=["#424042", "#424042"],
+                    other_screen_border=["#424042", "#424042"],
                     disable_drag=True
+
+                    # foreground=["#ffffff", "#ffffff"],
+                    # background=["#2d2a2e", "#2d2a2e"],
+                    # font='UbuntuMono Nerd Font',
+                    # fontsize=16,
+                    # margin_y=3,
+                    # margin_x=0,
+                    # padding_y=8,
+                    # padding_x=10,
+                    # borderwidth=1,
+                    # active=["#ffffff", "#ffffff"],
+                    # inactive=["#727072","#727072"],
+                    # rounded=False,
+                    # highlight_method='block',
+                    # urgent_alert_method='block',
+                    # urgent_border=["#ff6188","#ff6188"],
+                    # this_current_screen_border=["#a9dc76","#a9dc76"],
+                    # this_screen_border=["#5a565b","#5a565b"],
+                    # other_current_screen_border=["#2d2a2e", "#2d2a2e"],
+                    # other_screen_border=["#2d2a2e", "#2d2a2e"],
+                    # disable_drag=True
                 ),
+                widget.Sep(
+                    linewidth=0,
+                    padding=5,
+                    background=["#565456","#565456"]
+                ),
+                powerlineright('#565456','#2d2a2e'),
                 widget.Sep(
                     linewidth=0,
                     padding=5,

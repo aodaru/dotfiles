@@ -20,12 +20,12 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     ([mod, "shift"], "j", lazy.layout.shuffle_down()),
     ([mod, "shift"], "k", lazy.layout.shuffle_up()),
 
+
+    ([mod, "shift"], "f", lazy.layout.toggle_floating()),
     # Grow windows. If current window is on the edge of screen and direction
     # will be to screen edge - window would shrink.
-    ([mod, "control"], "h", lazy.layout.grow_left()),
-    ([mod, "control"], "l", lazy.layout.grow_right()),
-    ([mod, "control"], "j", lazy.layout.grow_down()),
-    ([mod, "control"], "k", lazy.layout.grow_up()),
+    ([mod, "control"], "h", lazy.layout.shrink()),
+    ([mod, "control"], "l", lazy.layout.grow()),
     ([mod], "n", lazy.layout.normalize()),
 
     # Toggle between split and unsplit sides of stack.
@@ -39,6 +39,9 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     ([mod], "Tab", lazy.next_layout()),
     ([mod], "w", lazy.window.kill()),
 
+    # Toggle between diferents screens
+    ([mod], "Up", lazy.next_screen()),
+
     ([mod, "control"], "r", lazy.restart()),
     ([mod, "control"], "q", lazy.shutdown()),
     ([mod], "r", lazy.spawncmd()),
@@ -48,7 +51,7 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     ([mod], "s", lazy.spawn("scrot")),
     ([mod], "e", lazy.spawn("thunar")),
     ([mod], "b", lazy.spawn("google-chrome-stable")),
-    ([mod, "shift"], "s", lazy.spawn("flameshot gui -p /home/adal/Pictures/Screenshots/")),
+    ([mod, "shift"], "s", lazy.spawn("flameshot gui")),
     ([], "XF86Calculator", lazy.spawn("kcalc")),
 
     # Window Nav
