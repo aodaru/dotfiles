@@ -39,7 +39,7 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     ([mod], "Tab", lazy.next_layout()),
     ([mod], "w", lazy.window.kill()),
 
-    # Toggle between diferents screens
+    # Toggle between diferents screens next_urgent
     ([mod], "Up", lazy.next_screen()),
 
     ([mod, "control"], "r", lazy.restart()),
@@ -49,7 +49,7 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     # Menu
     ([mod], "m", lazy.spawn("rofi -show drun")),
     ([mod], "s", lazy.spawn("scrot")),
-    ([mod], "e", lazy.spawn("thunar")),
+    ([mod], "e", lazy.spawn("nautilus")),
     ([mod], "b", lazy.spawn("google-chrome-stable")),
     ([mod, "shift"], "s", lazy.spawn("flameshot gui")),
     ([], "XF86Calculator", lazy.spawn("kcalc")),
