@@ -1,0 +1,1 @@
+/home/soporte/.nvm/versions/node/v18.17.0/lib/node_modules/zsh-history-enquirer/zsh-history-enquirer.plugin.zsh
