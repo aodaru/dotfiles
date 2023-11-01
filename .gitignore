@@ -4,6 +4,8 @@
 !.gitignore
 !.zshrc
 !.bashrc
+!/.tmux
+!/.oh-my-zsh
 !/.config
 !/.config/nvim
 !/.config/tmux
