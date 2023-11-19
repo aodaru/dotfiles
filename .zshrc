@@ -4,6 +4,9 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+# export TERM="xterm-256color"
+# [[ -n $TMUX ]] && export TERM="screen-256color"
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -70,23 +73,13 @@ ZSH_THEME="jovial"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(
-  git
-  z
-  autojump
-  urltools
-  bgnotify
-  zsh-autosuggestions
-  zsh-syntax-highlighting
-  zsh-history-enquirer
-  jovial
-)
+plugins=(z git autojump zsh-autosuggestions bgnotify jovial zsh-history-enquirer)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 # export MANPATH="/usr/local/man:$MANPATH"
-case $- in  *i*) 
+case $- in  *i*)
   [[ -z "$TMUX" ]] && exec tmux
 esac
 
@@ -160,6 +153,8 @@ export LS_COLORS="$(vivid generate lava)"
 alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
 alias vi=nvim
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+export nvm_dir="$home/.nvm"
+
+[ -s "$nvm_dir/nvm.sh" ] && \. "$nvm_dir/nvm.sh"  # this loads nvm
+[ -s "$nvm_dir/bash_completion" ] && \. "$nvm_dir/bash_completion"  # this loads nvm bash_completion
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
