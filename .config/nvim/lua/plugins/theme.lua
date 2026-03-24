@@ -1,0 +1,1 @@
+/home/agarcia/.config/omarchy/current/theme/neovim.lua

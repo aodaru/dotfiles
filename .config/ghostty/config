@@ -1,0 +1,56 @@
+# Dynamic theme colors
+config-file = ?"~/.config/omarchy/current/theme/ghostty.conf"
+
+# Reload config
+keybind = super+a>r=reload_config
+
+# Font
+font-family = "MesloLGL Nerd Font"
+font-style = Regular
+font-size = 10
+
+# Window
+window-theme = ghostty
+window-padding-x = 10
+window-padding-y = 5
+window-padding-balance=true
+confirm-close-surface=false
+resize-overlay = never
+gtk-toolbar-style = flat
+gtk-wide-tabs=false
+
+# Cursor styling
+cursor-style = "block"
+cursor-style-blink = false
+
+# Cursor styling + SSH session terminfo
+# (all shell integration options must be passed together)
+shell-integration-features = no-cursor,ssh-env
+
+# Keyboard bindings
+keybind = control+shift++=new_split:right
+keybind = control+shift+-=new_split:down
+
+keybind = control+shift+h=goto_split:left
+keybind = control+shift+j=goto_split:down
+keybind = control+shift+l=goto_split:right
+keybind = control+shift+k=goto_split:up
+
+keybind = shift+insert=paste_from_clipboard
+keybind = control+insert=copy_to_clipboard
+keybind = super+control+shift+alt+arrow_down=resize_split:down,101
+keybind = super+control+shift+alt+arrow_up=resize_split:up,101
+keybind = super+control+shift+alt+arrow_left=resize_split:left,101
+keybind = super+control+shift+alt+arrow_right=resize_split:right,101
+
+# tab control
+keybind = super+b>t=new_tab
+keybind = super+b>n=next_tab
+keybind = super+b>b=previous_tab
+keybind = super+b>w=close_tab
+
+# Slowdown mouse scrolling
+mouse-scroll-multiplier = 1.95
+
+# Fix general slowness on hyprland (https://github.com/ghostty-org/ghostty/discussions/3224)
+async-backend = epoll
