@@ -1,0 +1,171 @@
+{
+  "version": 3,
+  "skills": {
+    "n8n-code-javascript": {
+      "source": "czlonkowski/n8n-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/czlonkowski/n8n-skills.git",
+      "skillPath": "skills/n8n-code-javascript/SKILL.md",
+      "skillFolderHash": "c4f553cb6d020ff10e60218c945c686e9779240a",
+      "installedAt": "2026-02-05T04:31:53.726Z",
+      "updatedAt": "2026-02-05T04:31:53.726Z"
+    },
+    "find-skills": {
+      "source": "vercel-labs/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/skills.git",
+      "skillPath": "skills/find-skills/SKILL.md",
+      "skillFolderHash": "c2f31172b6f256272305a5e6e7228b258446899f",
+      "installedAt": "2026-02-05T04:32:00.725Z",
+      "updatedAt": "2026-02-05T04:32:00.725Z"
+    },
+    "modern-javascript-patterns": {
+      "source": "wshobson/agents",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/wshobson/agents.git",
+      "skillPath": "plugins/javascript-typescript/skills/modern-javascript-patterns/SKILL.md",
+      "skillFolderHash": "5d9626129bea70557e1ab9165aeae9b539ae99aa",
+      "installedAt": "2026-02-05T04:46:42.939Z",
+      "updatedAt": "2026-02-05T04:46:42.939Z"
+    },
+    "typescript-expert": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillPath": "skills/typescript-expert/SKILL.md",
+      "skillFolderHash": "d86635f315a33ada966d864947c1e8c3f0a7c0a8",
+      "installedAt": "2026-02-05T04:48:33.607Z",
+      "updatedAt": "2026-02-05T04:48:33.607Z"
+    },
+    "web-design-guidelines": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/agent-skills.git",
+      "skillPath": "skills/web-design-guidelines/SKILL.md",
+      "skillFolderHash": "3116f3e62dbd02b44a598b1aa690d2a8938e8f89",
+      "installedAt": "2026-02-05T04:49:55.763Z",
+      "updatedAt": "2026-02-05T04:49:55.763Z"
+    },
+    "frontend-design": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/anthropics/skills.git",
+      "skillPath": "skills/frontend-design/SKILL.md",
+      "skillFolderHash": "928950704df8a8b885c03de5da626331e6f29cf8",
+      "installedAt": "2026-02-05T04:50:21.667Z",
+      "updatedAt": "2026-02-05T04:50:21.667Z"
+    },
+    "sap-sqlscript": {
+      "source": "secondsky/sap-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/secondsky/sap-skills.git",
+      "skillPath": "plugins/sap-sqlscript/skills/sap-sqlscript/SKILL.md",
+      "skillFolderHash": "9f3085ed9d2276fabd73b4b3585b8a45f8c036a7",
+      "installedAt": "2026-02-12T20:02:16.242Z",
+      "updatedAt": "2026-02-12T20:02:16.242Z"
+    },
+    "self-learning": {
+      "source": "philschmid/self-learning-skill",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/philschmid/self-learning-skill.git",
+      "skillPath": "skills/self-learning/SKILL.md",
+      "skillFolderHash": "1910273b722724ad76d7e7015c7bc761c92e2200",
+      "installedAt": "2026-02-14T15:31:28.399Z",
+      "updatedAt": "2026-02-14T17:21:39.356Z"
+    },
+    "n8n-workflow-patterns": {
+      "source": "czlonkowski/n8n-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/czlonkowski/n8n-skills.git",
+      "skillPath": "skills/n8n-workflow-patterns/SKILL.md",
+      "skillFolderHash": "9e415e54ca7fc81347998dcda274a5385368742e",
+      "installedAt": "2026-02-14T15:57:32.923Z",
+      "updatedAt": "2026-02-14T15:57:32.923Z"
+    },
+    "odoo-development": {
+      "source": "mindrally/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mindrally/skills.git",
+      "skillPath": "odoo-development/SKILL.md",
+      "skillFolderHash": "9343b63352ef55d9a30d60b3f462598994426c94",
+      "installedAt": "2026-02-14T17:25:17.152Z",
+      "updatedAt": "2026-02-14T17:25:17.152Z"
+    },
+    "documentation-lookup": {
+      "source": "upstash/context7",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/upstash/context7.git",
+      "skillPath": "plugins/claude/context7/skills/documentation-lookup/SKILL.md",
+      "skillFolderHash": "4aedd1bbd79f085458a06b097fbc8bba9194a310",
+      "installedAt": "2026-02-14T22:02:49.087Z",
+      "updatedAt": "2026-02-14T22:02:49.087Z"
+    },
+    "documentation-templates": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillPath": "skills/documentation-templates/SKILL.md",
+      "skillFolderHash": "f29194c01eec7d85644966d0aea66bab1fedfaf0",
+      "installedAt": "2026-02-14T22:03:32.358Z",
+      "updatedAt": "2026-02-14T22:03:32.358Z"
+    },
+    "lean-startup": {
+      "source": "wondelai/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/wondelai/skills.git",
+      "skillPath": "lean-startup/SKILL.md",
+      "skillFolderHash": "4f6ad15d5b81e9eafbd71f1c15d828c1b596be6e",
+      "installedAt": "2026-02-16T03:08:28.272Z",
+      "updatedAt": "2026-02-16T03:08:28.272Z"
+    },
+    "marketing-ideas": {
+      "source": "davila7/claude-code-templates",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/davila7/claude-code-templates.git",
+      "skillPath": "cli-tool/components/skills/business-marketing/marketing-ideas/SKILL.md",
+      "skillFolderHash": "3056576bf1dbb6d11283e0df9fae30c23d0694c1",
+      "installedAt": "2026-02-16T03:10:03.776Z",
+      "updatedAt": "2026-02-16T03:10:03.776Z"
+    },
+    "creative-intelligence": {
+      "source": "aj-geddes/claude-code-bmad-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aj-geddes/claude-code-bmad-skills.git",
+      "skillPath": "bmad-skills/creative-intelligence/SKILL.md",
+      "skillFolderHash": "f36b277344b4b3f5a4c58486d38b1ceebe9888c3",
+      "installedAt": "2026-02-16T03:12:16.238Z",
+      "updatedAt": "2026-02-16T03:12:16.238Z"
+    },
+    "copywriting": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coreyhaines31/marketingskills.git",
+      "skillPath": "skills/copywriting/SKILL.md",
+      "skillFolderHash": "caa94beec4e4f2e4be0aab6203981fbed43a20b4",
+      "installedAt": "2026-02-16T19:13:39.162Z",
+      "updatedAt": "2026-02-16T19:13:39.162Z"
+    },
+    "mcp-builder": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/anthropics/skills.git",
+      "skillPath": "skills/mcp-builder/SKILL.md",
+      "skillFolderHash": "9173e2c2107aac82d4ca6c726d71e89d11760470",
+      "installedAt": "2026-02-16T19:16:06.021Z",
+      "updatedAt": "2026-02-16T19:16:06.021Z"
+    }
+  },
+  "dismissed": {
+    "findSkillsPrompt": true
+  },
+  "lastSelectedAgents": [
+    "amp",
+    "cline",
+    "codex",
+    "cursor",
+    "gemini-cli",
+    "github-copilot",
+    "kimi-cli",
+    "opencode"
+  ]
+}

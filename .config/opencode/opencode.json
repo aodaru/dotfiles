@@ -1,0 +1,63 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "ollama": {
+      "models": {
+        "kimi-k2.5:cloud": {
+          "_launch": true,
+          "limit": {
+            "context": 262144,
+            "output": 262144
+          },
+          "name": "kimi-k2.5:cloud"
+        },
+        "qwen2.5-coder:1.5b": {
+          "_launch": true,
+          "name": "qwen2.5-coder:1.5b"
+        },
+        "qwen3-coder-next:cloud": {
+          "_launch": true,
+          "limit": {
+            "context": 262144,
+            "output": 32768
+          },
+          "name": "qwen3-coder-next:cloud"
+        },
+        "qwen3.5:0.8b": {
+          "_launch": true,
+          "name": "qwen3.5:0.8b"
+        },
+        "gemma3:27b-cloud": {
+          "_launch": true,
+          "name": "gemma3:27b-cloud"
+        }
+      },
+      "name": "ollama",
+      "npm": "@ai-sdk/openai-compatible",
+      "options": {
+        "baseurl": "https://ollama.teapartydev.duckdns.org/v1"
+      }
+    },
+    "ollamalocal": {
+      "models": {
+        "qwen2.5-coder:1.5b16k": {
+          "_launch": true,
+          "name": "qwen2.5-coder:1.5b16k"
+        },
+        "qwen3.5:0.8b16k": {
+          "_launch": true,
+          "name": "qwen3.5:0.8b16k"
+        },
+        "phi3:3.8b": {
+          "_launch": true,
+          "name": "phi3:3.8b"
+        },
+      },
+      "name": "ollama local",
+      "npm": "@ai-sdk/openai-compatible",
+      "options": {
+        "baseURL": "http://localhost:11434/v1"
+      }
+    }
+  }
+}
