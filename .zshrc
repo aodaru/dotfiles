@@ -5,6 +5,7 @@ autoload -Uz compinit
 compinit
 
 # export TMUX_FZF_LAUNCH_KEY="F"
+export TERM=xterm-256color
 
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 bindkey '^w' autosuggest-execute

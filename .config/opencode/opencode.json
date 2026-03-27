@@ -38,20 +38,16 @@
         "baseurl": "https://ollama.teapartydev.duckdns.org/v1"
       }
     },
-    "ollamalocal": {
+    "ollamafj": {
       "models": {
-        "qwen2.5-coder:1.5b16k": {
+        "orieg/gemma3-tools:1b": {
           "_launch": true,
-          "name": "qwen2.5-coder:1.5b16k"
-        },
-        "qwen3.5:0.8b16k": {
-          "_launch": true,
-          "name": "qwen3.5:0.8b16k"
-        },
-        "phi3:3.8b": {
-          "_launch": true,
-          "name": "phi3:3.8b"
-        },
+          "name": "orieg/gemma3-tools:1b",
+          "limit": {
+            "context": 4879,
+            "output": 2768
+          },
+        }
       },
       "name": "ollama local",
       "npm": "@ai-sdk/openai-compatible",
