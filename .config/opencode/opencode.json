@@ -37,23 +37,6 @@
       "options": {
         "baseurl": "https://ollama.teapartydev.duckdns.org/v1"
       }
-    },
-    "ollamafj": {
-      "models": {
-        "orieg/gemma3-tools:1b": {
-          "_launch": true,
-          "name": "orieg/gemma3-tools:1b",
-          "limit": {
-            "context": 4879,
-            "output": 2768
-          },
-        }
-      },
-      "name": "ollama local",
-      "npm": "@ai-sdk/openai-compatible",
-      "options": {
-        "baseURL": "http://localhost:11434/v1"
-      }
     }
   }
 }
