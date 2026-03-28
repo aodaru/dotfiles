@@ -6,6 +6,9 @@ compinit
 
 # export TMUX_FZF_LAUNCH_KEY="F"
 export TERM=xterm-256color
+# Ollama
+export OLLAMA_NUM_PARALLEL=1
+export OLLAMA_CONTEXT_LENGTH=16384
 
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 bindkey '^w' autosuggest-execute
