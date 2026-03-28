@@ -1,4 +1,9 @@
 {
-  "name": "Gruvbox Dark Medium",
-  "extension": "jdinhlife.gruvbox"
+  "name": "Darcula",
+  "extension": "rokoroku.vscode-theme-darcula",
+  "settings": {
+    "workbench.colorTheme": "Darcula",
+    "workbench.preferredDarkColorTheme": "Darcula",
+    "window.titleBarStyle": "custom"
+  }
 }
