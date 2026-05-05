@@ -10,6 +10,7 @@ export TERM=xterm-256color
 export OLLAMA_NUM_PARALLEL=1
 export OLLAMA_CONTEXT_LENGTH=16384
 
+
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 bindkey '^w' autosuggest-execute
 bindkey '^e' autosuggest-accept
@@ -38,10 +39,12 @@ alias ltree="eza --tree --level=2  --icons --git"
 alias ls="eza --long -b --icons=auto --sort=modified --reverse -h --color-scale all --color-scale-mode=gradient"
 alias ll="eza --long -b --icons=auto --sort=modified --reverse -h --color-scale all --color-scale-mode=gradient"
 alias la="eza --long -b --icons=auto --sort=modified --reverse -h --color-scale all --color-scale-mode=gradient -a"
-alias winup="docker compose -f ~/.config/windows/docker-compose-aod.yml up -d"
-alias windown="docker compose -f ~/.config/windows/docker-compose-aod.yml down"
-alias wg0up="_ wg-quick up wg0"
-alias wg0down="_ wg-quick down wg0"
+alias macup="docker compose -f ~/.config/mac/docker-compose.yml up -d"
+alias macdown="docker compose -f ~/.config/mac/docker-compose.yml down"
+# alias wg0up="_ wg-quick up wg0"
+# alias wg0down="_ wg-quick down wg0"
+alias pi="source /home/agarcia/pi-vs-claude-code/.env && /home/agarcia/.local/share/pnpm/pi"
+alias q="pi --model big-pickle -p"
 
 # Dirs
 alias ..="cd .."
@@ -54,7 +57,44 @@ alias _="sudo"
 alias tson="_ tailscale set --exit-node=100.106.174.104"
 alias tson2="_ tailscale set --exit-node=100.108.183.101"
 alias tsoff="_ tailscale set --exit-node="
-alias fjr="xfreerdp3 /u:agarcia /v:satcom1901.tail1a17f4.ts.net /gfx:AVC420:on /compression /network:auto -themes -wallpaper /sec:tls +f"
+alias fjr="xfreerdp3 /u:agarcia /v:satcom1901.tail1a17f4.ts.net /gfx:AVC420:on /compression /network:auto -themes -wallpaper /dynamic-resolution /sec:tls +f"
+
+# Función para activar el enrutamiento de la VPN
+vpn_on() {
+    echo "🚀 Activando enrutamiento VPN..."
+    
+    # 1. Regla de Forward en el Host
+    sudo iptables -I FORWARD 1 -s 10.0.64.0/24 -d 172.17.32.0/24 -j ACCEPT
+    sudo iptables -I FORWARD 1 -s 10.0.64.0/24 -d 172.30.30.0/24 -j ACCEPT
+    
+    # 2. Regla de SNAT en el Host
+    sudo iptables -t nat -A POSTROUTING -s 10.0.64.0/24 -d 172.17.32.0/24 -j SNAT --to-source 10.212.138.98
+    sudo iptables -t nat -A POSTROUTING -s 10.0.64.0/24 -d 172.30.30.0/24 -j SNAT --to-source 10.212.138.98
+    
+    # 3. Ruta en la VM Windows (vía Docker)
+    # Nota: Usamos cmd /c para ejecutar el comando de Windows dentro del contenedor
+    echo "ejecutar en windows: route add 172.17.32.0 mask 255.255.255.0 10.0.64.1"
+    echo "ejecutar en windows: route add 172.30.30.0 mask 255.255.255.0 10.0.64.1"
+    
+    echo "✅ Configuración aplicada."
+}
+
+# Función para desactivar el enrutamiento
+vpn_off() {
+    echo "🛑 Desactivando enrutamiento VPN..."
+    
+    # 1. Borrar regla de Forward
+    sudo iptables -D FORWARD -s 10.0.64.0/24 -d 172.17.32.0/24 -j ACCEPT
+    sudo iptables -D FORWARD -s 10.0.64.0/24 -d 172.30.30.0/24 -j ACCEPT
+    
+    # 2. Borrar regla de SNAT
+    sudo iptables -t nat -D POSTROUTING -s 10.0.64.0/24 -d 172.30.30.0/24 -j SNAT --to-source 10.212.138.98
+    
+    echo "ejecutar en windows: route delete 172.17.32.0 mask 255.255.255.0 10.0.64.1"
+    echo "ejecutar en windows: route delete 172.30.30.0 mask 255.255.255.0 10.0.64.1"
+    
+    echo "🧹 Limpieza completada."
+}
 
 # bun completions
 [ -s "/home/agarcia/.bun/_bun" ] && source "/home/agarcia/.bun/_bun"
@@ -96,3 +136,4 @@ source <(fzf --zsh)
 eval "$(starship init zsh)"
 export STARSHIP_CONFIG=~/.config/starship.toml
 export LANG=en_US.UTF-8
+eval "$(mise activate zsh)"

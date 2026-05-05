@@ -11,8 +11,8 @@
         "kimi-k2.5:cloud": {
           "name": "kimi-k2.5:cloud"
         },
-        "qwen2.5-coder:1.5b": {
-          "name": "qwen2.5-coder:1.5b"
+        "qwen2.5-coder:0.5b-instruct-q4_K_M": {
+          "name": "qwen2.5-coder:0.5b-instruct-q4_K_M"
         },
         "qwen3-coder-next:cloud": {
           "name": "qwen3-coder-next:cloud"
@@ -23,10 +23,17 @@
         "gemma3:27b-cloud": {
           "name": "gemma3:27b-cloud"
         },
-        "llama3.2:1b": {
-          "name": "llama3.2:1b"
+        "qwen3.5:2b-q4_K_M": {
+          "name": "qwen3.5:2b-q4_K_M"
         }
       }
+    }
+  },
+  "mcp": {
+    "notion": {
+      "type": "remote",
+      "url": "https://mcp.notion.com/mcp",
+      "oauth": {}
     }
   }
 }
