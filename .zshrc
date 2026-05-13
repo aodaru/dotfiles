@@ -45,6 +45,8 @@ alias macdown="docker compose -f ~/.config/mac/docker-compose.yml down"
 # alias wg0down="_ wg-quick down wg0"
 alias pi="source /home/agarcia/pi-vs-claude-code/.env && /home/agarcia/.local/share/pnpm/pi"
 alias q="pi --model big-pickle -p"
+alias llama="~/llama.cpp/build/bin/llama-cli"
+alias llama-server="~/llama.cpp/build/bin/llama-server"
 
 # Dirs
 alias ..="cd .."

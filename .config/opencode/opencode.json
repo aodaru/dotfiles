@@ -27,6 +27,22 @@
           "name": "qwen3.5:2b-q4_K_M"
         }
       }
+    },
+    "llama.cpp": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "llama-server (local)",
+      "options": {
+        "baseURL": "http://127.0.0.1:8080/v1"
+      },
+      "models": {
+        "llama": {
+          "name": "llama",
+          "limit": {
+            "context": 128000,
+            "output": 65536
+          }
+        }
+      }
     }
   },
   "mcp": {
