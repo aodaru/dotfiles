@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-state=$(dbus-send --session --print-reply=literal --dest=org.gnome.Pomodoro /org/gnome/Pomodoro org.freedesktop.DBus.Properties.Get string:org.gnome.Pomodoro string:State 2>/dev/null | awk '{print $2}')
+state=$(dbus-send --session --print-reply=literal --dest=io.github.focustimerhq.FocusTimer /io/github/focustimerhq/FocusTimer org.freedesktop.DBus.Properties.Get string:"io.github.focustimerhq.FocusTimer.Timer" string:"State" 2>/dev/null | awk '{print $2}')
 
-if [[ -z "$state" || "$state" == "null" || "$state" == "stopped" || "$state" == "idle" ]]; then
-  gnome-pomodoro --start
+if [[ -z "$state" || "$state" == "null" || "$state" == "stopped" ]]; then
+  focus-timer --start
 else
-  gnome-pomodoro --pause-resume
+  focus-timer --start-pause-resume
 fi
