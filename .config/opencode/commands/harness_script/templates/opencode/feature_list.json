@@ -1,0 +1,10 @@
+{
+  "project": "{{PROJECT_NAME}}",
+  "description": "Proyecto Vue generado con install-harness.",
+  "rules": {
+    "one_feature_at_a_time": true,
+    "require_tests_to_close": true,
+    "valid_status": ["pending", "in_progress", "done", "blocked"]
+  },
+  "features": []
+}

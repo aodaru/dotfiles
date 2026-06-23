@@ -92,10 +92,12 @@ def resolve_angular_test_runner(
 def collect_template_files(
     language_key: str,
     framework: str | None,
+    tool: str = "claude",
 ) -> list[tuple[Path, Path]]:
     files: list[tuple[Path, Path]] = []
 
-    core_dir = TEMPLATES_DIR / "core"
+    template_base = "opencode" if tool == "opencode" else "core"
+    core_dir = TEMPLATES_DIR / template_base
     for root, _dirs, filenames in os.walk(core_dir):
         for fname in filenames:
             src = Path(root) / fname
@@ -360,7 +362,17 @@ def main() -> None:
 
     angular_test_runner_cmd = resolve_angular_test_runner(framework, args.angular_test_runner, runtime, registry)
 
-    files = collect_template_files(language_key, framework)
+    # Selección de herramienta (opencode o claude)
+    print("\n── Selección de herramienta ──────────────────────────")
+    print("  1) opencode")
+    print("  2) claude  (legacy)")
+    try:
+        choice = input("\n¿Qué tool usas? [1]: ").strip() or "1"
+    except EOFError:
+        choice = "1"
+    tool = "opencode" if choice == "1" else "claude"
+
+    files = collect_template_files(language_key, framework, tool)
     variables = build_variables(language_key, framework, angular_test_runner_cmd, registry)
 
     to_create, to_overwrite = preview_changes(files, target_dir, args.force)

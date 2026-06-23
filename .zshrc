@@ -6,9 +6,6 @@ compinit
 
 # export TMUX_FZF_LAUNCH_KEY="F"
 export TERM=xterm-256color
-# Ollama
-export OLLAMA_NUM_PARALLEL=1
-export OLLAMA_CONTEXT_LENGTH=16384
 
 
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -43,10 +40,7 @@ alias macup="docker compose -f ~/.config/mac/docker-compose.yml up -d"
 alias macdown="docker compose -f ~/.config/mac/docker-compose.yml down"
 # alias wg0up="_ wg-quick up wg0"
 # alias wg0down="_ wg-quick down wg0"
-alias pi="source /home/agarcia/pi-vs-claude-code/.env && /home/agarcia/.local/share/pnpm/pi"
-alias q="pi --model big-pickle -p"
-alias llama="~/llama.cpp/build/bin/llama-cli"
-alias llama-server="~/llama.cpp/build/bin/llama-server"
+alias open="xdg-open"
 
 # Dirs
 alias ..="cd .."
@@ -59,7 +53,7 @@ alias _="sudo"
 alias tson="_ tailscale set --exit-node=100.106.174.104"
 alias tson2="_ tailscale set --exit-node=100.108.183.101"
 alias tsoff="_ tailscale set --exit-node="
-alias fjr="xfreerdp3 /u:agarcia /v:satcom1901.tail1a17f4.ts.net /gfx:AVC420:on /compression /network:auto -themes -wallpaper /dynamic-resolution /sec:tls +f"
+alias fjr="xfreerdp3 /u:agarcia /v:192.168.1.95 /gfx:AVC420:on /compression /network:auto -themes -wallpaper /dynamic-resolution /sec:tls +f"
 
 # Función para activar el enrutamiento de la VPN
 vpn_on() {
@@ -108,8 +102,8 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 # pnpm
 export PNPM_HOME="/home/agarcia/.local/share/pnpm"
 case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
+  *":$PNPM_HOME/bin:"*) ;;
+  *) export PATH="$PNPM_HOME/bin:$PATH" ;;
 esac
 # pnpm end
 export PATH="$HOME/.local/bin:$PATH"
