@@ -30,12 +30,12 @@ LS_COLORS+=$_ls_colors
 #
 alias cat=bat
 
-alias l="eza -l --icons --git -a"
-alias lt="eza --tree --level=2 --long --icons --git"
-alias ltree="eza --tree --level=2  --icons --git"
-alias ls="eza --long -b --icons=auto --sort=modified --reverse -h --color-scale all --color-scale-mode=gradient"
-alias ll="eza --long -b --icons=auto --sort=modified --reverse -h --color-scale all --color-scale-mode=gradient"
-alias la="eza --long -b --icons=auto --sort=modified --reverse -h --color-scale all --color-scale-mode=gradient -a"
+alias l="eza -l --icons --git -a --color=always"
+alias lt="eza --tree --level=2 --long --icons --git --color=always"
+alias ltree="eza --tree --level=2  --icons --git --color=always"
+alias ls="eza --long -b --icons=auto --sort=modified --reverse -h --color-scale all --color-scale-mode=gradient --color=always"
+alias ll="eza --long -b --icons=auto --sort=modified --reverse -h --color-scale all --color-scale-mode=gradient --color=always"
+alias la="eza --long -b --icons=auto --sort=modified --reverse -h --color-scale all --color-scale-mode=gradient -a --color=always"
 alias macup="docker compose -f ~/.config/mac/docker-compose.yml up -d"
 alias macdown="docker compose -f ~/.config/mac/docker-compose.yml down"
 # alias wg0up="_ wg-quick up wg0"
